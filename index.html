@@ -8,24 +8,21 @@
 
     <header class="page-header">
     
-    	<h1 class="visually-hidden">Седона</h1>
+    	<h1 class="visually-hidden">Добро пожаловать на сайт города Седона</h1>
     	
     	<nav class="page-nav">
     		<h2 class="visually-hidden">Главное меню</h2>
     		
-    		<ul class="main-menu main-menu-left">
+    		<div class="main-menu-logo"><a><img src="img/logo.jpg" alt="Логотип Седона"></a></div>
+    		
+    		<ul class="main-menu">
     			<li class="main-menu-item"><a href="#">Информация</a></li>
     			<li class="main-menu-item"><a href="#">Фото и видео</a></li>
-    		</ul>
-    		<div class="main-menu-logo"><a><img src="img/logo.jpg" alt="Логотип Седона"></a></div>
-    		<ul class="main-menu main-menu-right">
     			<li class="main-menu-item"><a href="#">Карта штата</a></li>
-    			<li class="main-menu-item"><a href="#">Гостиницы</a></li>
+    			<li class="main-menu-item"><a href="hotels.html">Гостиницы</a></li>
     		</ul>
     		
     	</nav>
-    	
-			<div class="page-intro">			</div>
     	
     </header>
     
@@ -34,10 +31,10 @@
     	<p class="main-subtitle">Седона — небольшой городок в Аризоне, 
 заслуживающий большего!</p>
    		
-   		<p class="reason-intro">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
-   		
-   		<article class="why-sedona">
-   			<h2 class="visually-hidden">5 причин, по которым Седона круче, чем гранд каньон!</h2>
+   		<section class="why-sedona">
+   			<h2 class="visually-hidden">Особенности Седоны</h2>
+   			
+   			<p class="reason-intro">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
    			
    			<section class="reason">
    				
@@ -89,26 +86,26 @@
    				
    			</section>
    			    	
-   			    	<ul class="reasons-list">
+   			<ul class="reasons-list">
    			    		
-   			    		<li class="reasons-item">
-   			    			<h3 class="reason-title">Небольшая площадь</h3>
-   			    			<span class="reason-number">№3</span>
-   			    			<p class="reason-details">Все достопримечательности находятся очень близко</p>
-   			    		</li>
-   			    		<li class="reasons-item">
-   			    			<h3 class="reason-title">Красивая дорога</h3>
-   			    			<span class="reason-number">№4</span>
-   			    			<p class="reason-details">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-   			    		</li>
-   			    		<li class="reasons-item">
-   			    			<h3 class="reason-title">Мало туристов</h3>
-   			    			<span class="reason-number">№5</span>
-   			    			<p class="reason-details">Большинство едет в Гранд Каньон и толпится там</p>
-   			    		</li>
+   			  <li class="reasons-item">
+   			    <h3 class="reason-title">Небольшая площадь</h3>
+   			    <span class="reason-number">№3</span>
+   			    <p class="reason-details">Все достопримечательности находятся очень близко</p>
+   			  </li>
+   			  <li class="reasons-item">
+   			    <h3 class="reason-title">Красивая дорога</h3>
+   			    <span class="reason-number">№4</span>
+   			    <p class="reason-details">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+   			  </li>
+   			  <li class="reasons-item">
+   			    <h3 class="reason-title">Мало туристов</h3>
+   			    <span class="reason-number">№5</span>
+   			    <p class="reason-details">Большинство едет в Гранд Каньон и толпится там</p>
+   			  </li>
    			    		
-   			    	</ul>
-   		</article>
+   			</ul>
+   		</section>
     	
     	<section class="hotel-search">
     		
@@ -117,9 +114,11 @@
     		<p class="search-intro">Укажите предполагаемые даты поездки, 
 и мы покажем вам лучшие предложения гостиниц в Седоне</p>
    		
-   			<h2 class="hotel-search-title">Поиск гостиницы в Седоне</h2>
+   			<h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
    			
-   			<form action="htmlacademy.ru" method="post" class="hotel-search-form">
+   			<button class="btn hotel-search-btn" type="button">Поиск гостиницы в Седоне</button>
+   			
+   			<form action="htmlacademy.ru" method="post" class="modal hotel-search-form">
    				
    				<label for="date-in">Дата заезда</label>
    				
@@ -141,7 +140,7 @@
    				
    				<input type="number" id="children">
    				
-   				<button type="submit" class="btn hotel-search-btn">Найти</button>
+   				<button type="submit" class="btn hotel-find-btn">Найти</button>
    						
    			</form>
     		
@@ -159,10 +158,12 @@
     	
     	<div class="footer-hashtag">#visitsedona</div>
     	
+    	<h2 class="visually-hidden">Наши страницы в социальных сетях</h2>
+    	
     	<ul class="footer-social">
-				<li class="social social-tw"><p>Наши страницы в социальных сетях:</p><a href="">Twitter,</a></li>
-    		<li class="social social-fb"><a href="">Facebook</a></li>
-    		<li class="social social-yt"><a href="">and YouTube</a></li>
+				<li class="social social-tw"><a href="#">Twitter,</a></li>
+    		<li class="social social-fb"><a href="#">Facebook</a></li>
+    		<li class="social social-yt"><a href="#">and YouTube</a></li>
     	</ul>
     	
     	<div class="copyright">

@@ -8,15 +8,13 @@
 
     <header class="page-header">
     	
-    	<h1 class="visually-hidden">Выбор и заказ гостиницы в Седоне</h1>
+    	<h1 class="visually-hidden">Выбор и бронирование жилья в Седоне</h1>
     	<nav class="page-nav">
     		<h2 class="visually-hidden">Главное меню</h2>
-    		<ul class="main-menu main-menu-left">
+    		<div class="main-menu-logo"><a href="index.html"><img src="img/logo.jpg" alt="Логотип Седона"></a></div>
+    		<ul class="main-menu">
     			<li class="main-menu-item"><a href="#">Информация</a></li>
     			<li class="main-menu-item"><a href="#">Фото и видео</a></li>
-    		</ul>
-    		<div class="main-menu-logo"><a href="index.html"><img src="img/logo.jpg" alt="Логотип Седона"></a></div>
-    		<ul class="main-menu main-menu-right">
     			<li class="main-menu-item"><a href="#">Карта штата</a></li>
     			<li class="main-menu-item active"><a>Гостиницы</a></li>
     		</ul>
@@ -29,72 +27,84 @@
     	
     	<form class="filter-form">
     	
-    		<h2 class="visually-hidden">Фильтры для выбора жилья</h2>
+    		<h2 class="visually-hidden">Фильтры для выбора</h2>
     		
-    		<fieldset class="infrastructure">
+    		<fieldset class="filter-form-infrastructure">
     			
     			<legend>Инфраструктура</legend>
     			
-    			<input type="checkbox" name="pool" id="pool" checked>
-    			<label for="pool">Бассейн</label>
+    			<p class="filter-form-option">
+    				<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="pool" id="pool" checked>
+    				<label for="pool">Бассейн</label>
+    			</p>
     			
-    			<input type="checkbox" name="parking" id="parking">
-    			<label for="parking">Парковка</label>
+    			<p class="filter-form-option">
+    				<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="parking" id="parking">
+    				<label for="parking">Парковка</label>
+    			</p>
     			
-    			<input type="checkbox" name="wi-fi" id="wi-fi">
-    			<label for="wi-fi">Wi-Fi</label>
+    			<p class="filter-form-option">
+    				<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="wi-fi" id="wi-fi">
+    				<label for="wi-fi">Wi-Fi</label>
+    			</p>
     			
     		</fieldset>
     		
-    		<fieldset class="housing-type">
+    		<fieldset class="filter-form-housing-type">
     			
     			<legend>Тип жилья</legend>
     			
-    			<input type="checkbox" name="hotel" id="hotel" checked>
-    			<label for="hotel">Гостиница</label>
+    			<p class="filter-form-option">
+    				<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hotel" id="hotel" checked>
+    				<label for="hotel">Гостиница</label>
+    			</p>
     			
-    			<input type="checkbox" name="motel" id="motel" checked>
-    			<label for="motel">Мотель</label>
+    			<p class="filter-form-option">
+    				<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="motel" id="motel" checked>
+    				<label class="visually-hidden filter-input filter-input-checkbox" for="motel">Мотель</label>
+    			</p>
     			
-    			<input type="checkbox" name="suite" id="suite" checked>
-    			<label for="suite">Апартаменты</label>
+    			<p class="filter-form-option">
+    				<input type="checkbox" name="suite" id="suite" checked>
+    				<label for="suite">Апартаменты</label>
+    			</p>
     			
     		</fieldset>
     		
-    		<label for="cost-range">Стоимость в сутки (р):</label>
-    		<div class="cost-range-show">
-    			<div class="cost-range-from"></div>
-    			<div class="cost-range-to"></div>
+    		<div class="filter-form-cost">
+    			<label for="cost-range">Стоимость в сутки (р):</label>
+    			<div class="cost-range-show">
+    				<div class="cost-range-from"></div>
+    				<div class="cost-range-to"></div>
+    			</div>
+    			<input type="range" id="cost-range" name="cost-range">
+    			<div class="cost-range-control"></div>
+    			<button type="submit" class="btn filter-form-btn no-js" id="filter-form-button">Показать</button>
+    			<a href="#" class="btn filter-form-btn" id="filter-form-a">Показать</a>
     		</div>
-    		<input type="range" id="cost-range" name="cost-range">
-    		<div class="cost-range-control"></div>
-    		
-    		<button type="submit" class="btn filter-form-btn no-js" id="filter-form-button">Показать</button>
-    		<a href="#" class="btn filter-form-btn" id="filter-form-a">Показать</a>
     		
     	</form>
     	
-    	<div class="result-sort">
-    		
-    		<span class="found">Найдено: 3</span>
-    		
-    		<span class="sort">Сортировка:</span>
-    		
-    		<ul class="sort-categories">
-    			<li class="sort-category"><a href="#" class="active">По цене</a></li>
-    			<li class="sort-category"><a href="#">По типу</a></li>
-    			<li class="sort-category"><a href="#">По рейтингу</a></li>
-    		</ul>
-    		
-    		<div class="sort-controls">
-    			<a href="#" class="sort-up"></a>
-    			<a href="#" class="sort-down active"></a>
-    		</div>
-    		
-    	</div>
-    	
     	<section class="filter-results">
     		<h2 class="visually-hidden">Результаты фильтра</h2>
+    		<div class="result-sort">
+    		
+    			<span class="found">Найдено: 3</span>
+    		
+    			<span class="sort">Сортировка:</span>
+    		
+    			<ul class="sort-categories">
+    				<li class="sort-category"><a href="#" class="active">По цене</a></li>
+    				<li class="sort-category"><a href="#">По типу</a></li>
+    				<li class="sort-category"><a href="#">По рейтингу</a></li>
+    			</ul>
+    		
+    			<div class="sort-controls">
+    				<a href="#" class="sort-up"></a>
+    				<a href="#" class="sort-down active"></a>
+    			</div>
+    		
+    		</div>
     		<div class="filter-results-item">
     			<img src="img/result1.jpg" alt="Гостиница Amara Resort & SPA">
     			<h3 class="filter-results-title">Amara Resort & SPA</h3>
@@ -133,10 +143,12 @@
     	
     	<div class="footer-hashtag">#visitsedona</div>
     	
+     	<h2 class="visually-hidden">Наши страницы в социальных сетях</h2>
+     
     	<ul class="footer-social">
-				<li class="social social-tw"><p>Наши страницы в социальных сетях:</p><a href="">Twitter,</a></li>
-    		<li class="social social-fb"><a href="">Facebook</a></li>
-    		<li class="social social-yt"><a href="">and YouTube</a></li>
+				<li class="social social-tw"><a href="#">Twitter,</a></li>
+    		<li class="social social-fb"><a href="#">Facebook</a></li>
+    		<li class="social social-yt"><a href="#">and YouTube</a></li>
     	</ul>
     	
     	<div class="copyright">
